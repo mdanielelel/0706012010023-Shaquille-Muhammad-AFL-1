@@ -27,6 +27,7 @@ class Toko {
 }
 
 
+
 var listToko: [Toko] = []
 var cart: [Cart] = []
 
@@ -118,8 +119,8 @@ while !exit {
                     }
                 }
             }
-            print("-")
-            print("Total: Rp. \(total)")
+            print("-------------------")
+            print("Total: Rp \(total)")
             print("[P] Pay")
             print("[Q] Continue shopping")
             
@@ -127,7 +128,7 @@ while !exit {
             userInput = readLine()!
             
             if (userInput == "P") {
-                print("Your Total Order: Rp. \(total)")
+                print("Your Total Order: Rp \(total)")
                 print("Input amount: ")
                 
                 var userInput: String = ""
@@ -137,7 +138,7 @@ while !exit {
                 if (userPay < total) {
                     print("Not enough cash!")
                 } else if (userPay > total) {
-                    print("Your change: \(userPay - total)")
+                    print("Your change: Rp \(userPay - total)")
                     print("Enjoy your meals!")
                     exit = true
                 } else {
